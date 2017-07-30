@@ -51,7 +51,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -90,8 +90,8 @@
 <li><strong>文件夹及文件的操作</strong></li>
 <li><strong>文件打开以及保存对话框</strong></li>
 </ul>
-<h2 id="一、C-文件流操作"><a href="#一、C-文件流操作" class="headerlink" title="一、C++文件流操作"></a>一、C++文件流操作</h2><p>C++提供的文件流ifstream、ofsteam和fstream进行文件操作，文件流操作都是基于流的操作，分别继承于IO类的istream、ostream、stream。由于该文件流是继承于IO类,所以IO类的基本方法都是可以使用的。</p>
-<h3 id="1-1打开文件"><a href="#1-1打开文件" class="headerlink" title="1.1打开文件"></a>1.1打开文件</h3><p>在fstream类中，有一个成员函数open()，就是用来打开文件的，其原型是：</p>
+<h2 id="一、C-文件流操作"><a href="#一、C-文件流操作" class="headerlink" title="一、C++文件流操作"></a>一、C++文件流操作</h2><p>&ensp;C++提供的文件流ifstream、ofsteam和fstream进行文件操作，文件流操作都是基于流的操作，分别继承于IO类的istream、ostream、stream。由于该文件流是继承于IO类,所以IO类的基本方法都是可以使用的。</p>
+<h3 id="1-1-打开文件"><a href="#1-1-打开文件" class="headerlink" title="1.1 打开文件"></a>1.1 打开文件</h3><p>&emsp;在文件流中，有一个成员函数open()，就是用来打开文件的（有open有相同的构造函数），其原型是：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">open</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* filename,<span class="keyword">int</span> mode,<span class="keyword">int</span> access)</span></span>;</div></pre></td></tr></table></figure>
 <p><strong>参数：</strong></p>
 <ul>
@@ -143,11 +143,57 @@
 </tr>
 </tbody>
 </table>
-
+<h3 id="1-2-文件关闭"><a href="#1-2-文件关闭" class="headerlink" title="1.2 文件关闭"></a>1.2 文件关闭</h3><p>&emsp;打开的文件使用完成后一定要关闭，文件流提供了成员函数close()来完成此操作。</p>
+<h3 id="1-3-读写文件"><a href="#1-3-读写文件" class="headerlink" title="1.3 读写文件"></a>1.3 读写文件</h3><p>&emsp;读写文件分为文本文件和二进制文件的读取，对于文本文件的读取比较简单，用插入器和析取器就可以了；而对于二进制的读取就要复杂些，下要就详细的介绍这两种方式</p>
+<h4 id="1-3-1-文本文件的读写"><a href="#1-3-1-文本文件的读写" class="headerlink" title="1.3.1 文本文件的读写"></a>1.3.1 文本文件的读写</h4><p>&emsp;文本文件的读写很简单：用插入器(&lt;&lt;)向文件输出；用析取器(&gt;&gt;)从文件输入。假设file1是以输入方式打开，file2以输出打开。示例如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">file2&lt;&lt;<span class="string">"I Love You"</span>;<span class="comment">//向文件写入字符串"I Love You" </span></div><div class="line"><span class="keyword">int</span> i; </div><div class="line">file1&gt;&gt;i;<span class="comment">//从文件输入一个整数值。</span></div></pre></td></tr></table></figure>
+<p>&emsp;这种方式还有一种简单的格式化能力，比如可以指定输出为16进制等等，具体的格式有以下一些操纵符功能输入/输出：</p>
+<ul>
+<li>dec 格式化为十进制数值数据  输入和输出</li>
+<li>endl 输出一个换行符并刷新此流  输出 </li>
+<li>ends 输出一个空字符  输出 </li>
+<li>flush 刷新缓存区  输出</li>
+<li>hex 格式化为十六进制数值数据  输入和输出 </li>
+<li>oct 格式化为八进制数值数据  输入和输出 </li>
+<li>setpxecision(int p) 设置浮点数的精度位数  输出<br>比如要把123当作十六进制输出：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">file1&lt;&lt;<span class="number">123</span>&lt;&lt;hex;</div></pre></td></tr></table></figure>
+<h4 id="1-3-2-二进制文件的读写"><a href="#1-3-2-二进制文件的读写" class="headerlink" title="1.3.2 二进制文件的读写"></a>1.3.2 二进制文件的读写</h4><ul>
+<li>put() </li>
+</ul>
+<p>&emsp;put()函数向流写入一个字符，其原型是ofstream &amp;put(char ch)，使用也比较简单，如file1.put(‘c’);就是向流写一个字符’c’。</p>
+<ul>
+<li>get() </li>
+</ul>
+<p>&emsp;get()函数比较灵活，有3种常用的重载形式：</p>
+<ul>
+<li>一种就是和put()对应的形式：ifstream &amp;get(char &amp;ch);功能是从流中读取一个字符，结果保存在引用ch中，如果到文件尾，返回空字符。</li>
+</ul>
+<ul>
+<li>一种重载形式的原型是： int get();这种形式是从流中返回一个字符，如果到达文件尾，返回EOF。</li>
+</ul>
+<ul>
+<li>还有一种形式的原型是：ifstream &amp;get(char *buf,int num,char delim=’/n’)；这种形式把字符读入由 buf 指向的数组，直到读入了 num个字符或遇到了由 delim 指定的字符，如果没使用 delim 这个参数，将使用缺省值换行符’/n’。例如：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">file2.get(str1,<span class="number">127</span>,<span class="string">'A'</span>);<span class="comment">//从文件中读取字符到字符串str1，当遇到字符'A'或读取了127个字符时终止。</span></div></pre></td></tr></table></figure>
+<ul>
+<li>读写数据块</li>
+</ul>
+<p>&emsp;要读写二进制数据块，使用成员函数read()和write()成员函数，它们原型如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">read(<span class="keyword">unsigned</span> <span class="keyword">char</span> *buf,<span class="keyword">int</span> num); </div><div class="line">write(<span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> *buf,<span class="keyword">int</span> num);</div></pre></td></tr></table></figure>
+<p>&emsp;read()从文件中读取 num 个字符到 buf 指向的缓存中，如果在还未读入 num 个字符时就到了文件尾，可以用成员函数 int gcount();来取得实际读取的字符数；<br>&emsp;而 write() 从buf 指向的缓存写 num 个字符到文件中，值得注意的是缓存的类型是 unsigned char *，有时可能需要类型转换。例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> str1[]=<span class="string">"I Love You"</span>; </div><div class="line"><span class="keyword">int</span> n[<span class="number">5</span>]; </div><div class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"xxx.xxx"</span>)</span></span>; </div><div class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"yyy.yyy"</span>)</span></span>; </div><div class="line">out.write(str1,<span class="built_in">strlen</span>(str1));<span class="comment">//把字符串str1全部写到yyy.yyy中 </span></div><div class="line">in.read((<span class="keyword">unsigned</span> <span class="keyword">char</span>*)n,<span class="keyword">sizeof</span>(n));<span class="comment">//从xxx.xxx中读取指定个整数，注意类型转换 </span></div><div class="line">in.close();</div><div class="line">out.close();</div></pre></td></tr></table></figure>
+<h4 id="1-4-检测EOF"><a href="#1-4-检测EOF" class="headerlink" title="1.4 检测EOF"></a>1.4 检测EOF</h4><p>&emsp;成员函数eof()用来检测是否到达文件尾，如果到达文件尾返回非0值，否则返回0。原型是:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">eof</span><span class="params">()</span></span>;</div></pre></td></tr></table></figure>
+<h4 id="1-5-文件定位"><a href="#1-5-文件定位" class="headerlink" title="1.5 文件定位"></a>1.5 文件定位</h4><p>&emsp;和C的文件操作方式不同的是，C++ I/O系统管理两个与一个文件相联系的指针。一个是读指针，它说明输入操作在文件中的位置；另一个是写指针，它下次写操作的位置。每次执行输入或输出时，相应的指针自动变化。所以，C++的文件定位分为读位置和写位置的定位，对应的成员函数是 seekg()和 seekp()，seekg()是设置读位置，seekp是设置写位置。它们最通用的形式如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function">istream &amp;<span class="title">seekg</span><span class="params">(streamoff offset,seek_dir origin)</span></span>;</div><div class="line"><span class="function">ostream &amp;<span class="title">seekp</span><span class="params">(streamoff offset,seek_dir origin)</span></span>;</div></pre></td></tr></table></figure></p>
+<p>&emsp;streamoff定义于 iostream.h 中，定义有偏移量 offset 所能取得的最大值，seek_dir 表示移动的基准位置，是一个有以下值的枚举：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ios::beg：　　文件开头</div><div class="line">ios::cur：　　文件当前位置</div><div class="line">ios::end：　　文件结尾</div></pre></td></tr></table></figure>
+<p>&emsp;这两个函数一般用于二进制文件，因为文本文件会因为系统对字符的解释而可能与预想的值不同。<br>例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">file1.seekg(<span class="number">1234</span>,ios::cur);<span class="comment">//把文件的读指针从当前位置向后移1234个字节</span></div><div class="line">file2.seekp(<span class="number">1234</span>,ios::beg);<span class="comment">//把文件的写指针从文件开头向后移1234个字节</span></div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/09/blog_md/File_Control/" data-id="cj5qptw4l0000hcv6clzwcqpj" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/07/09/blog_md/File_Control/" data-id="cj5qsr20q0000w8v6sikns1j0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -172,7 +218,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
     </div>
@@ -182,7 +228,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
