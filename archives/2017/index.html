@@ -1,1 +1,318 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Archiv | 刘东海的blog</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">刘东海的blog</h1><a id="logo" href="/.">刘东海的blog</a><p class="description"></p></div><div id="nav-menu"><a href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/" class="current"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><div class="post-archive"><div class="archive-wrap"><h2>2017</h2><ul class="listing"><li><a href="/2017/08/13/blog_md/MFC文件操作/" title="MFC文件操作"><span class="date">08月13日</span><span class="tite">MFC文件操作</span></a></li><li><a href="/2017/07/09/blog_md/C++文件操作/" title="C++中的文件操作"><span class="date">07月09日</span><span class="tite">C++中的文件操作</span></a></li></ul></div></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/13/blog_md/MFC文件操作/">MFC文件操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/blog_md/C++文件操作/">C++中的文件操作</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> Tags</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> Archiv</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">RSS</a> |  <a href="/about/">Über</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">liudonghai.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="My blog"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Dylan Liu">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.5.0" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/archives/2017/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.5.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+    <title>
+  
+    归档 - Dylan Liu
+  
+</title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Dylan Liu</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Dylan Liu</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <section id="archive" class="archive">
+    
+      
+        <div class="archive-title">
+          <span class="archive-post-counter">
+            目前共计 2 篇日志
+          </span>
+        </div>
+      
+    
+
+    
+      
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h2 class="archive-year">2017</h2>
+          </div>
+        
+      
+      
+      <div class="archive-post">
+        <span class="archive-post-time">
+          
+            08-13
+          
+        </span>
+        <span class="archive-post-title">
+          <a href="/2017/08/13/blog_md/MFC文件操作/" class="archive-post-link">
+            MFC文件操作
+          </a>
+        </span>
+      </div>
+    
+      
+        
+        
+
+        
+      
+      
+      <div class="archive-post">
+        <span class="archive-post-time">
+          
+            07-09
+          
+        </span>
+        <span class="archive-post-title">
+          <a href="/2017/07/09/blog_md/C++文件操作/" class="archive-post-link">
+            C++中的文件操作
+          </a>
+        </span>
+      </div>
+    
+  </section>
+
+  
+  <nav class="pagination">
+    
+    
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">liudonghai</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.5.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.5.0"></script>
+
+  </body>
+</html>

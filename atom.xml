@@ -1,181 +1,28 @@
-<!DOCTYPE html>
-<html lang="zh-Hans">
-  <head>
-    
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-
-  <meta name="description" content="MFC文件操作"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Dylan Liu">
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.5.0" />
-
-
-
-<link rel="canonical" href="http://yoursite.com/2017/08/13/blog_md/MFC文件操作/"/>
-
-
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.5.0" />
-
-
-
-
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Dylan Liu</title>
   
-
-
-
-  <script id="baidu_push">
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-
-    <title> MFC文件操作 - Dylan Liu </title>
-  </head>
-
-  <body><div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/." class="logo">Dylan Liu</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    
-      <a href="/">
-        <li class="mobile-menu-item">
-          
-          
-            Home
-          
-        </li>
-      </a>
-    
-      <a href="/archives/">
-        <li class="mobile-menu-item">
-          
-          
-            Archives
-          
-        </li>
-      </a>
-    
-  </ul>
-</nav>
-
-    <div class="container" id="mobile-panel">
-      <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">Dylan Liu</a>
-</div>
-
-<nav class="site-navbar">
+  <link href="/atom.xml" rel="self"/>
   
-    <ul id="menu" class="menu">
-      
-        <li class="menu-item">
-          <a class="menu-item-link" href="/">
-            
-            
-              首页
-            
-          </a>
-        </li>
-      
-        <li class="menu-item">
-          <a class="menu-item-link" href="/archives/">
-            
-            
-              归档
-            
-          </a>
-        </li>
-      
-    </ul>
+  <link href="http://yoursite.com/"/>
+  <updated>2017-08-13T15:31:33.048Z</updated>
+  <id>http://yoursite.com/</id>
   
-</nav>
-
-      </header>
-
-      <main id="main" class="main">
-        <div class="content-wrapper">
-          <div id="content" class="content">
-            
+  <author>
+    <name>liudonghai</name>
+    
+  </author>
   
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          MFC文件操作
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2017-08-13
-        </span>
-        
-      </div>
-    </header>
-
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MFC文件操作</title>
+    <link href="http://yoursite.com/2017/08/13/blog_md/MFC%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2017/08/13/blog_md/MFC文件操作/</id>
+    <published>2017-08-13T08:54:35.561Z</published>
+    <updated>2017-08-13T15:31:33.048Z</updated>
     
-    
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1．文件的打开-保存对话框"><span class="toc-text">1．文件的打开/保存对话框</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2．CFile类的文件操作"><span class="toc-text">2．CFile类的文件操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-CArchive使用"><span class="toc-text">3.CArchive使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-CStdioFile文件操作"><span class="toc-text">4.CStdioFile文件操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5．临时文件的使用"><span class="toc-text">5．临时文件的使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-文件的查找"><span class="toc-text">6.文件的查找</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7．文件的复制、删除"><span class="toc-text">7．文件的复制、删除</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-判断文件、文件夹是否存在"><span class="toc-text">7.1 判断文件、文件夹是否存在</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-文件夹创建、文件删除、文件移动、文件复制"><span class="toc-text">7.2 文件夹创建、文件删除、文件移动、文件复制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3文件创建"><span class="toc-text">7.3文件创建</span></a></li></ol></li></ol>
-    </div>
-  </div>
-
-
-    <div class="post-content">
-      
-        <p>本文记录了MFC中常见的文件相关操作</p>
+    <content type="html"><![CDATA[<p>本文记录了MFC中常见的文件相关操作</p>
 <h1 id="1．文件的打开-保存对话框"><a href="#1．文件的打开-保存对话框" class="headerlink" title="1．文件的打开/保存对话框"></a>1．文件的打开/保存对话框</h1><p>&emsp;让用户选择文件进行打开和存储操作时，就要用到文件打开/保存对话框。MFC的类CFileDialog用于实现这种功能。使用CFileDialog声明一个对象时，第一个BOOL型参数用于指定文件的打开或保存，当为TRUE时将构造一个文件打开对话框，为FALSE时构造一个文件保存对话框。</p>
 <p>&emsp;在构造CFileDialog对象时，如果在参数中指定了OFN_ALLOWMULTISELECT风格，则在此对话框中可以进行多选操作。此时要重点注意为此CFileDialog对象的m_ofn.lpstrFile分配一块内存，用于存储多选操作所返回的所有文件路径名，如果不进行分配或分配的内存过小就会导致操作失败。下面这段程序演示了文件打开对话框的使用方法。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">explicit</span> <span class="title">CFileDialog</span><span class="params">(</span></span></div><div class="line">   BOOL bOpenFileDialog, <span class="comment">//文件打开对话框类型，TRUE为打开对话框</span></div><div class="line">   LPCTSTR lpszDefExt = <span class="literal">NULL</span>, <span class="comment">//默认的文件扩展名</span></div><div class="line">   LPCTSTR lpszFileName = <span class="literal">NULL</span>, <span class="comment">//显示文件名框的初始文件名</span></div><div class="line">   DWORD dwFlags = OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,<span class="comment">//可以使用自定义对话框一个或多个标记的组合</span></div><div class="line">   LPCTSTR lpszFilter = <span class="literal">NULL</span>, <span class="comment">//一系列字符串名称的筛选器可应用于文件</span></div><div class="line">   CWnd* pParentWnd = <span class="literal">NULL</span>, <span class="comment">//指针到文件对话框的父级或所有者窗口</span></div><div class="line">   DWORD dwSize = <span class="number">0</span>,<span class="comment">//OPENFILENAME 结构的大小</span></div><div class="line">   BOOL bVistaStyle = TRUE<span class="comment">//指定文件对话框的样式的参数</span></div><div class="line">);</div></pre></td></tr></table></figure>
@@ -406,143 +253,148 @@
 <blockquote>
 <p>CopyFile: If this parameter is TRUE and the new file specified by lpNewFileName already exists, the function fails. If this parameter is FALSE and the new file already exists, the function overwrites the existing file and succeeds.</p>
 </blockquote>
-<h2 id="7-3文件创建"><a href="#7-3文件创建" class="headerlink" title="7.3文件创建"></a>7.3文件创建</h2>
-      
-    </div>
-
+<h2 id="7-3文件创建"><a href="#7-3文件创建" class="headerlink" title="7.3文件创建"></a>7.3文件创建</h2>]]></content>
     
-      
-      
-
-
-
-      
-      
+    <summary type="html">
     
-
+      &lt;p&gt;本文记录了MFC中常见的文件相关操作&lt;/p&gt;
+&lt;h1 id=&quot;1．文件的打开-保存对话框&quot;&gt;&lt;a href=&quot;#1．文件的打开-保存对话框&quot; class=&quot;headerlink&quot; title=&quot;1．文件的打开/保存对话框&quot;&gt;&lt;/a&gt;1．文件的打开/保存对话框&lt;/h1&gt;&lt;p&gt;
     
-      <footer class="post-footer">
-        
-        
-        
-  <nav class="post-nav">
+    </summary>
     
     
-      <a class="next" href="/2017/07/09/blog_md/C++文件操作/">
-        <span class="next-text nav-default">C++中的文件操作</span>
-        <span class="prev-text nav-mobile">下一篇</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-    
-  </nav>
-
-      </footer>
-    
-
-  </article>
-
-
-          </div>
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>  
-      </main>
-
-      <footer id="footer" class="footer">
-
-  <div class="social-links">
-    
-      
-        
-          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-        
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-    
-      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-    
-  </div>
-
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
-  </span>
+  </entry>
   
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
-  </span>
-
-  <span class="copyright-year">
+  <entry>
+    <title>C++中的文件操作</title>
+    <link href="http://yoursite.com/2017/07/09/blog_md/C++%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2017/07/09/blog_md/C++文件操作/</id>
+    <published>2017-07-09T15:34:57.769Z</published>
+    <updated>2017-07-30T16:02:04.990Z</updated>
     
-    &copy; 
-     
-      2015 - 
+    <content type="html"><![CDATA[<p>主要总结了以下几种类型的相关操作：</p>
+<ul>
+<li><strong>文件读写</strong></li>
+<li><strong>文件夹及文件的操作</strong></li>
+<li><strong>文件打开以及保存对话框</strong></li>
+</ul>
+<blockquote>
+<p>MSDN搜索关键字：fstream.</p>
+</blockquote>
+<p> [TOC]</p>
+<h2 id="一、C-文件流操作"><a href="#一、C-文件流操作" class="headerlink" title="一、C++文件流操作"></a>一、C++文件流操作</h2><p>&ensp;C++提供的文件流ifstream、ofsteam和fstream进行文件操作，文件流操作都是基于流的操作，分别继承于IO类的istream、ostream、stream。由于该文件流是继承于IO类,所以IO类的基本方法都是可以使用的。</p>
+<h3 id="1-1-打开文件"><a href="#1-1-打开文件" class="headerlink" title="1.1 打开文件"></a>1.1 打开文件</h3><p>&emsp;在文件流中，有一个成员函数open()，就是用来打开文件的（有open有相同的构造函数），其原型是：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">open</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* filename,<span class="keyword">int</span> mode,<span class="keyword">int</span> access)</span></span>;</div></pre></td></tr></table></figure>
+<p><strong>参数：</strong></p>
+<ul>
+<li><p>filename:<br>The name of the file to open.</p>
+</li>
+<li><p>mode:<br>One of the enumerations in ios_base::openmode.</p>
+</li>
+<li><p>access：<br>The default file opening protection, equivalent to the shflag parameter in _fsopen, _wfsopen.</p>
+</li>
+</ul>
+<p><strong>文件打开方式</strong></p>
+<p>The type is a bitmask type that describes an object that can store the opening mode for several iostreams objects. The distinct flag values (elements) are:</p>
+<ul>
+<li><strong>app</strong>, to seek to the end of a stream before each insertion.</li>
+<li><strong>ate</strong>, to seek to the end of a stream when its controlling object is first created.</li>
+<li><strong>binary</strong>, to read a file as a binary stream, rather than as a text stream.</li>
+<li><strong>in</strong>, to permit extraction from a stream.</li>
+<li><strong>out</strong>, to permit insertion to a stream.</li>
+<li><strong>trunc</strong>, to delete contents of an existing file when its controlling object is created.</li>
+</ul>
+<p>The argument access is a constant expression consisting of one of the following manifest constants, defined in Share.h.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_SH_COMPAT</td>
+<td>Sets Compatibility mode for 16-bit applications.</td>
+</tr>
+<tr>
+<td>_SH_DENYNO</td>
+<td>Permits read and write access.</td>
+</tr>
+<tr>
+<td>_SH_DENYRD</td>
+<td>Denies read access to the file.</td>
+</tr>
+<tr>
+<td>_SH_DENYRW</td>
+<td>Denies read and write access to the file.</td>
+</tr>
+<tr>
+<td>_SH_DENYWR</td>
+<td>Denies write access to the file.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-2-文件关闭"><a href="#1-2-文件关闭" class="headerlink" title="1.2 文件关闭"></a>1.2 文件关闭</h3><p>&emsp;打开的文件使用完成后一定要关闭，文件流提供了成员函数close()来完成此操作。</p>
+<h3 id="1-3-读写文件"><a href="#1-3-读写文件" class="headerlink" title="1.3 读写文件"></a>1.3 读写文件</h3><p>&emsp;读写文件分为文本文件和二进制文件的读取，对于文本文件的读取比较简单，用插入器和析取器就可以了；而对于二进制的读取就要复杂些，下要就详细的介绍这两种方式</p>
+<h4 id="1-3-1-文本文件的读写"><a href="#1-3-1-文本文件的读写" class="headerlink" title="1.3.1 文本文件的读写"></a>1.3.1 文本文件的读写</h4><p>&emsp;文本文件的读写很简单：用插入器(&lt;&lt;)向文件输出；用析取器(&gt;&gt;)从文件输入。假设file1是以输入方式打开，file2以输出打开。示例如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">file2&lt;&lt;<span class="string">"I Love You"</span>;<span class="comment">//向文件写入字符串"I Love You" </span></div><div class="line"><span class="keyword">int</span> i; </div><div class="line">file1&gt;&gt;i;<span class="comment">//从文件输入一个整数值。</span></div></pre></td></tr></table></figure>
+<p>&emsp;这种方式还有一种简单的格式化能力，比如可以指定输出为16进制等等，具体的格式有以下一些操纵符功能输入/输出：</p>
+<ul>
+<li>dec 格式化为十进制数值数据  输入和输出</li>
+<li>endl 输出一个换行符并刷新此流  输出 </li>
+<li>ends 输出一个空字符  输出 </li>
+<li>flush 刷新缓存区  输出</li>
+<li>hex 格式化为十六进制数值数据  输入和输出 </li>
+<li>oct 格式化为八进制数值数据  输入和输出 </li>
+<li>setpxecision(int p) 设置浮点数的精度位数  输出<br>比如要把123当作十六进制输出：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">file1&lt;&lt;<span class="number">123</span>&lt;&lt;hex;</div></pre></td></tr></table></figure>
+<h4 id="1-3-2-二进制文件的读写"><a href="#1-3-2-二进制文件的读写" class="headerlink" title="1.3.2 二进制文件的读写"></a>1.3.2 二进制文件的读写</h4><ul>
+<li>put() </li>
+</ul>
+<p>&emsp;put()函数向流写入一个字符，其原型是ofstream &amp;put(char ch)，使用也比较简单，如file1.put(‘c’);就是向流写一个字符’c’。</p>
+<ul>
+<li>get() </li>
+</ul>
+<p>&emsp;get()函数比较灵活，有3种常用的重载形式：</p>
+<ul>
+<li>一种就是和put()对应的形式：ifstream &amp;get(char &amp;ch);功能是从流中读取一个字符，结果保存在引用ch中，如果到文件尾，返回空字符。</li>
+</ul>
+<ul>
+<li>一种重载形式的原型是： int get();这种形式是从流中返回一个字符，如果到达文件尾，返回EOF。</li>
+</ul>
+<ul>
+<li>还有一种形式的原型是：ifstream &amp;get(char *buf,int num,char delim=’/n’)；这种形式把字符读入由 buf 指向的数组，直到读入了 num个字符或遇到了由 delim 指定的字符，如果没使用 delim 这个参数，将使用缺省值换行符’/n’。例如：</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">file2.get(str1,<span class="number">127</span>,<span class="string">'A'</span>);<span class="comment">//从文件中读取字符到字符串str1，当遇到字符'A'或读取了127个字符时终止。</span></div></pre></td></tr></table></figure>
+<ul>
+<li>读写数据块</li>
+</ul>
+<p>&emsp;要读写二进制数据块，使用成员函数read()和write()成员函数，它们原型如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">read(<span class="keyword">unsigned</span> <span class="keyword">char</span> *buf,<span class="keyword">int</span> num); </div><div class="line">write(<span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> *buf,<span class="keyword">int</span> num);</div></pre></td></tr></table></figure>
+<p>&emsp;read()从文件中读取 num 个字符到 buf 指向的缓存中，如果在还未读入 num 个字符时就到了文件尾，可以用成员函数 int gcount();来取得实际读取的字符数；<br>&emsp;而 write() 从buf 指向的缓存写 num 个字符到文件中，值得注意的是缓存的类型是 unsigned char *，有时可能需要类型转换。例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> str1[]=<span class="string">"I Love You"</span>; </div><div class="line"><span class="keyword">int</span> n[<span class="number">5</span>]; </div><div class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"xxx.xxx"</span>)</span></span>; </div><div class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"yyy.yyy"</span>)</span></span>; </div><div class="line">out.write(str1,<span class="built_in">strlen</span>(str1));<span class="comment">//把字符串str1全部写到yyy.yyy中 </span></div><div class="line">in.read((<span class="keyword">unsigned</span> <span class="keyword">char</span>*)n,<span class="keyword">sizeof</span>(n));<span class="comment">//从xxx.xxx中读取指定个整数，注意类型转换 </span></div><div class="line">in.close();</div><div class="line">out.close();</div></pre></td></tr></table></figure>
+<h4 id="1-4-检测EOF"><a href="#1-4-检测EOF" class="headerlink" title="1.4 检测EOF"></a>1.4 检测EOF</h4><p>&emsp;成员函数eof()用来检测是否到达文件尾，如果到达文件尾返回非0值，否则返回0。原型是:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">eof</span><span class="params">()</span></span>;</div></pre></td></tr></table></figure>
+<h4 id="1-5-文件定位"><a href="#1-5-文件定位" class="headerlink" title="1.5 文件定位"></a>1.5 文件定位</h4><p>&emsp;和C的文件操作方式不同的是，C++ I/O系统管理两个与一个文件相联系的指针。一个是读指针，它说明输入操作在文件中的位置；另一个是写指针，它下次写操作的位置。每次执行输入或输出时，相应的指针自动变化。所以，C++的文件定位分为读位置和写位置的定位，对应的成员函数是 seekg()和 seekp()，seekg()是设置读位置，seekp是设置写位置。它们最通用的形式如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function">istream &amp;<span class="title">seekg</span><span class="params">(streamoff offset,seek_dir origin)</span></span>;</div><div class="line"><span class="function">ostream &amp;<span class="title">seekp</span><span class="params">(streamoff offset,seek_dir origin)</span></span>;</div></pre></td></tr></table></figure></p>
+<p>&emsp;streamoff定义于 iostream.h 中，定义有偏移量 offset 所能取得的最大值，seek_dir 表示移动的基准位置，是一个有以下值的枚举：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ios::beg：　　文件开头</div><div class="line">ios::cur：　　文件当前位置</div><div class="line">ios::end：　　文件结尾</div></pre></td></tr></table></figure>
+<p>&emsp;这两个函数一般用于二进制文件，因为文本文件会因为系统对字符的解释而可能与预想的值不同。<br>例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">file1.seekg(<span class="number">1234</span>,ios::cur);<span class="comment">//把文件的读指针从当前位置向后移1234个字节</span></div><div class="line">file2.seekp(<span class="number">1234</span>,ios::beg);<span class="comment">//把文件的写指针从文件开头向后移1234个字节</span></div></pre></td></tr></table></figure>]]></content>
     
-    2017
-
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">liudonghai</span>
-  </span>
-</div>
-      </footer>
-
-      <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
-      </div>
-    </div>
-
+    <summary type="html">
     
-  
-
-
-
+      &lt;p&gt;主要总结了以下几种类型的相关操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;文件读写&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件夹及文件的操作&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件打开以及保存对话框&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
     
-
-
-
-
+    </summary>
+    
+    
+  </entry>
   
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
-  
-
-  
-    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
-  
-
-  
-
-
-    <script type="text/javascript" src="/js/src/even.js?v=2.5.0"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.5.0"></script>
-
-  </body>
-</html>
+</feed>
